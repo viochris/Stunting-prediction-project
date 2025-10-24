@@ -11,25 +11,25 @@ gender_enc, stunting_enc, scaler, best_model = load_model()
 # ==============================
 # App Header
 # ==============================
-st.set_page_config(page_title="Diabetes Prediction", page_icon="🩺", layout="centered")
-st.header("🩺 Diabetes Prediction App")
-st.write("Enter the patient's details below to predict the likelihood of diabetes.")
+st.set_page_config(page_title="Stunting Prediction", page_icon="🧒", layout="centered")
+st.header("🧒 Stunting Prediction App")
+st.write("Enter the child's details below to predict the likelihood of stunting.")
 
 # ==============================
 # Input Form
 # ==============================
 with st.form("prediction_form"):
-    name = st.text_input("👤 Patient Name", value="Susy")
+    name = st.text_input("👶 Child's Name", value="Susy")
 
     gender = st.selectbox(
-        "🤰 Gender",
+        "🚻 Gender",
         ("Laki-laki", "Perempuan"),
         index=None,
         placeholder="Select gender..."
     )
 
     age = st.number_input(
-        "🍬 Age (Months)",
+        "📅 Age (Months)",
         min_value=0,
         max_value=24,
         value=19,
@@ -44,14 +44,13 @@ with st.form("prediction_form"):
     )
 
     berat_badan = st.number_input(
-        "🩸 Weight (kg)",
+        "⚖️ Weight (kg)",
         min_value=0.0,
         value=13.3,
         step=0.1
     )
 
     submitted = st.form_submit_button("🚀 Predict")
-
 
 # ==============================
 # Prediction Result
@@ -67,4 +66,4 @@ if submitted and gender is not None:
     # display prediction result
     st.success(f"**Prediction:** {result}")
 else:
-    st.warning("🩺 Oops! Looks like some fields are missing. Please fill in all inputs first.")
+    st.warning("⚠️ Oops! Looks like some fields are missing. Please fill in all inputs first.")
