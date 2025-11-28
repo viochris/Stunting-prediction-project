@@ -1,3 +1,11 @@
+"""
+Module: Streamlit Frontend Application
+Author: Silvio Christian, Joe
+Description: 
+    The user interface layer built with Streamlit. It handles user interactions, 
+    input validation, and calls the backend inference engine to display results.
+"""
+
 import streamlit as st
 import numpy as np
 from model import load_model, predict
@@ -71,4 +79,11 @@ if submitted and gender is not None:
     # 3. Output Display: Showing the result to the user.
     st.markdown("---")
     st.subheader("🔎 Prediction Result")
-    # ... (Display logic follows)
+    st.write(f"**Name:** {name if name else 'N/A'}")
+
+    # Displaying the final classification result clearly with a success banner.
+    st.success(f"**Prediction:** {result}")
+
+else:
+    # Error Handling: Prompting the user if the form is submitted incomplete (e.g., missed gender).
+    st.warning("⚠️ Oops! Looks like some fields are missing. Please fill in all inputs first.")
