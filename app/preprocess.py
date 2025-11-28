@@ -1,6 +1,6 @@
 import pandas as pd
 
-def preprocess_input(gender, age, berat_badan, tinggi_badan):
+def preprocess_input(gender, age, tinggi_badan, berat_badan):
     """
     Transforms raw user inputs into a structured DataFrame compatible with the model.
     """
@@ -20,3 +20,4 @@ def preprocess_input(gender, age, berat_badan, tinggi_badan):
     
     # Returns a single-row DataFrame ready for the Encoding & Scaling pipeline.
     return df
+
