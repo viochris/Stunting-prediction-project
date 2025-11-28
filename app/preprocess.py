@@ -1,3 +1,12 @@
+"""
+Module: Data Preprocessing & Schema Alignment
+Author: Silvio Christian, Joe
+Description: 
+    This module handles the critical transformation of raw user inputs into 
+    a structured pandas DataFrame that strictly aligns with the training data schema.
+    It ensures no feature mismatch errors occur during inference.
+"""
+
 import pandas as pd
 
 def preprocess_input(gender, age, tinggi_badan, berat_badan):
@@ -20,4 +29,5 @@ def preprocess_input(gender, age, tinggi_badan, berat_badan):
     
     # Returns a single-row DataFrame ready for the Encoding & Scaling pipeline.
     return df
+
 
