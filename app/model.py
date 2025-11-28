@@ -1,3 +1,12 @@
+"""
+Module: Model Loader & Inference Engine
+Author: Silvio Christian, Joe
+Description: 
+    This module manages the lifecycle of the Machine Learning artifacts.
+    It handles the deserialization (loading) of the Scaler, Encoders, and the Classifier,
+    and executes the end-to-end prediction pipeline.
+"""
+
 from sklearn.preprocessing import MinMaxScaler
 import joblib
 
