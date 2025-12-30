@@ -77,5 +77,6 @@ def predict(gender_enc, stunting_enc, scaler, best_model, input_data):
     # (e.g., 0 -> 'Normal', 1 -> 'Severely Stunted', 2 -> 'Stunted', 3 -> 'Tall').
     result = stunting_enc.inverse_transform(prediction)[0]
     
-    return result
+    return result, confidence
+
 
