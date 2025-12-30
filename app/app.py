@@ -82,8 +82,9 @@ if submitted and gender is not None:
     st.write(f"**Name:** {name if name else 'N/A'}")
 
     # Displaying the final classification result clearly with a success banner.
-    st.success(f"**Prediction:** {result} with Confidence {conf}")
-
+    # Note: 'conf[0]' extracts the number from the array.
+    # Note: ':.2%' formats the number into a percentage (e.g., 0.98 becomes 98.00%).
+    st.success(f"**Prediction:** {result} with Confidence {conf[0]:.2%}")
 else:
     # Error Handling: Prompting the user if the form is submitted incomplete (e.g., missed gender).
     st.warning("⚠️ Oops! Looks like some fields are missing. Please fill in all inputs first.")
