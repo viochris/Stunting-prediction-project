@@ -61,12 +61,21 @@ def predict(gender_enc, stunting_enc, scaler, best_model, input_data):
     # The mathematical calculation happens here based on the weights learned by the model.
     # Output is an array of class indices (e.g., [0] or [1]).
     prediction = best_model.predict(df)
+
+    # ---------------------------------------------------------
+    # STEP 4: PROBABILITY ESTIMATION (CONFIDENCE SCORE)
+    # ---------------------------------------------------------
+    # Instead of just the class, we calculate the probability/confidence.
+    # We select column [:,1] to get the likelihood of the 'Positive' class (e.g., Stunting).
+    # This is crucial for determining how sure the model is (e.g., 0.95 vs 0.51).
+    confidence = best_model.predict_proba(df)[:,1]
     
     # ---------------------------------------------------------
-    # STEP 4: DECODING (INVERSE TRANSFORM)
+    # STEP 5: DECODING (INVERSE TRANSFORM)
     # ---------------------------------------------------------
     # Converting the mathematical output (integer) back to a human-readable label
-    # (e.g., 0 -> 'Severe Stunting', 1 -> 'Normal').
+    # (e.g., 0 -> 'Normal', 1 -> 'Severely Stunted', 2 -> 'Stunted', 3 -> 'Tall').
     result = stunting_enc.inverse_transform(prediction)[0]
     
     return result
+
