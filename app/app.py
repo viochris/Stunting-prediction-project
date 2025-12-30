@@ -74,7 +74,7 @@ if submitted and gender is not None:
     input_value = preprocess_input(gender, age, tinggi_badan, berat_badan)
     
     # 2. Prediction: Running the full ML pipeline.
-    result = predict(gender_enc, stunting_enc, scaler, best_model, input_value)
+    result, conf = predict(gender_enc, stunting_enc, scaler, best_model, input_value)
 
     # 3. Output Display: Showing the result to the user.
     st.markdown("---")
@@ -82,7 +82,7 @@ if submitted and gender is not None:
     st.write(f"**Name:** {name if name else 'N/A'}")
 
     # Displaying the final classification result clearly with a success banner.
-    st.success(f"**Prediction:** {result}")
+    st.success(f"**Prediction:** {result} with Confidence {conf}")
 
 else:
     # Error Handling: Prompting the user if the form is submitted incomplete (e.g., missed gender).
