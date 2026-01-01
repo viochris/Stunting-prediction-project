@@ -88,7 +88,7 @@ You might notice the model achieves near-perfect accuracy. This is **not a sign 
 1.  **Clone the Repository**
 
     ```bash
-    git clone [https://github.com/viochris/stunting-prediction.git](https://github.com/viochris/stunting-prediction.git)
+    git clone https://github.com/viochris/stunting-prediction.git
     cd stunting-prediction
     ```
 
@@ -102,7 +102,7 @@ You might notice the model achieves near-perfect accuracy. This is **not a sign 
     Execute the Streamlit application:
 
     ```bash
-    streamlit run app.py
+    streamlit run app/app.py
     ```
 
     *Output: The app will open in your browser at `http://localhost:8501`*
