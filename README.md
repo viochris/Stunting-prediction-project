@@ -89,7 +89,7 @@ You might notice the model achieves near-perfect accuracy. This is **not a sign 
 
     ```bash
     git clone https://github.com/viochris/stunting-prediction.git
-    cd stunting-prediction
+    cd Stunting-prediction-project
     ```
 
 2.  **Install Dependencies**
