@@ -88,7 +88,7 @@ You might notice the model achieves near-perfect accuracy. This is **not a sign 
 1.  **Clone the Repository**
 
     ```bash
-    git clone https://github.com/viochris/stunting-prediction.git
+    git clone https://github.com/viochris/Stunting-prediction-project.git
     cd Stunting-prediction-project
     ```
 
