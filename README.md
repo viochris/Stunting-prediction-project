@@ -6,6 +6,8 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Modular-orange)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 
+> **⚠️ IMPORTANT CLINICAL DISCLAIMER:** The underlying machine learning model is trained entirely on **synthetic, machine-generated data**, not real-world patient records. This application is built as a proof-of-concept for educational and portfolio demonstration purposes only. It should **NOT** be used for actual medical diagnosis, screening, or clinical decision-making. Always consult a certified healthcare professional for medical advice.
+
 ## 📌 Overview
 **Stuntify Web App** is an End-to-End Machine Learning application designed to democratize access to early stunting detection.
 
@@ -71,8 +73,8 @@ Unlike basic notebooks, this project implements a strict lifecycle for every use
 
 | Metric        | Score    | Note                                                      |
 | :------------ | :------- | :-------------------------------------------------------- |
-| **Accuracy**  | **100%** | All predictions are correct based on the confusion matrix |
-| **Recall**    | **100%** | No stunting cases were missed (perfect sensitivity)       |
+| **Accuracy** | **100%** | All predictions are correct based on the confusion matrix |
+| **Recall** | **100%** | No stunting cases were missed (perfect sensitivity)       |
 | **Precision** | **100%** | No false positives across all classes                     |
 
 ### ⚠️ Why is Accuracy near 100%?
@@ -80,6 +82,7 @@ Unlike basic notebooks, this project implements a strict lifecycle for every use
 You might notice the model achieves near-perfect accuracy. This is **not a sign of overfitting**, but rather a reflection of the **deterministic nature** of the dataset.
 
   * **Clinical Logic:** Stunting is medically defined by a strict formula involving *Height-for-Age*.
+  * **Synthetic Dataset:** The data used is synthetic and machine-generated. Because the dataset was built using clean, algorithmic rules without the unpredictable noise of real-world data, it is naturally much easier for a machine learning model to perfectly recognize the underlying patterns.
   * **Model Behavior:** The model has successfully "reverse-engineered" these medical rules derived from WHO Growth Standards.
   * **Conclusion:** The model functions correctly as a **Rule-Approximation System**.
 
