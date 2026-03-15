@@ -7,6 +7,8 @@
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 
 > **⚠️ IMPORTANT CLINICAL DISCLAIMER:** The underlying machine learning model is trained entirely on **synthetic, machine-generated data**, not real-world patient records. This application is built as a proof-of-concept for educational and portfolio demonstration purposes only. It should **NOT** be used for actual medical diagnosis, screening, or clinical decision-making. Always consult a certified healthcare professional for medical advice.
+> 
+> **DATASET:** https://www.kaggle.com/datasets/jabirmuktabir/stunting-wasting-dataset
 
 ## 📌 Overview
 **Stuntify Web App** is an End-to-End Machine Learning application designed to democratize access to early stunting detection.
